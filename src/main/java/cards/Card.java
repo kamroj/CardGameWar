@@ -7,6 +7,11 @@ public class Card {
     private Value value;
     private Type type;
 
+    public Card(Value value) {
+        type = Type.CLUBS;
+        this.value = value;
+    }
+
     public Card(Type type, Value value) {
         this.type = type;
         this.value = value;
