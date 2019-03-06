@@ -2,6 +2,8 @@ package appMain;
 
 import cards.Card;
 import cards.DeckHandler;
+import consolegui.GuiDisplay;
+import game.GameHandler;
 import settings.ISetting;
 import settings.Settings;
 
@@ -13,6 +15,8 @@ public class AppMain {
         ISetting settings = new Settings();
         DeckHandler deckHandler = new DeckHandler(settings);
 
-        deckHandler.debugLog();
+        //GameHandler gameHandler = new GameHandler(deckHandler);
+        GuiDisplay guiDisplay = new GuiDisplay(settings);
+        guiDisplay.initializeDisplay();
     }
 }

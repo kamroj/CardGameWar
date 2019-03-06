@@ -1,13 +1,59 @@
 package consolegui;
 
+import cards.DeckHandler;
+import game.GameHandler;
+import settings.ISetting;
+
+import java.util.Scanner;
+
 /**
  * @author Kamil Rojek
  */
 public class GuiDisplay {
+    private Scanner sc;
+    private GameHandler gameHandler;
+
+    public GuiDisplay(ISetting setting) {
+        gameHandler = new GameHandler(new DeckHandler(setting));
+    }
 
     public void initializeDisplay() {
         displayConsoleInterface();
+        handleControl();
 
+    }
+
+
+    private void handleControl(){
+        int input = getInput();
+        if (inputValidation((input)) == false)
+            input = getInput();
+
+        switch (input) {
+            case 1:
+                gameHandler.startGame();
+                default:
+                    break;
+
+
+        }
+    }
+
+    private int getInput(){
+        sc = new Scanner(System.in);
+        while(!(sc.hasNextInt())) {
+            System.out.println("Input is invalid!");
+            sc.next();
+        }
+        return sc.nextInt();
+    }
+
+    private boolean inputValidation(int input) {
+        if (input < 1 || input > 3) {
+            System.out.println("Type 1, 2 or 3.");
+            return false;
+        }
+        return true;
     }
 
 
