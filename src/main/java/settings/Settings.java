@@ -9,35 +9,35 @@ public class Settings implements ISetting {
     private int numberOfJockers;
 
     //temp
-    public final int PLAYERS = 2;
-    public final int DECKS = 1;
-    public final int JOCKERS = 2;
+    private final int PLAYERS = 2;
+    private final int DECKS = 1;
+    private final int JOCKERS = 2;
 
 
-    @Override
     public void setNumberOfPlayers(int number) {
         numberOfPlayers = number;
     }
 
-    @Override
     public void setNumberOfDecks(int number) {
         numberOfDecks = number;
     }
 
-    @Override
     public void setNumberOfJokers(int number) {
         numberOfJockers = number;
     }
 
+    @Override
     public int getNumberOfPlayers(){
-        return numberOfPlayers;
+        return PLAYERS;
     }
 
+    @Override
     public int getNumberOfDecks() {
-        return numberOfDecks;
+        return DECKS;
     }
 
+    @Override
     public int getNumberOfJockers() {
-        return numberOfJockers;
+        return JOCKERS;
     }
 }
