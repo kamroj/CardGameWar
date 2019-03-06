@@ -9,6 +9,8 @@ import java.util.Scanner;
 /**
  * @author Kamil Rojek
  */
+
+// TODO Marcin Ogorzalek - can be named View
 public class GuiDisplay {
     private Scanner sc;
     private GameHandler gameHandler;

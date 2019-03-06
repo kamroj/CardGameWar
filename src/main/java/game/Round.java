@@ -7,8 +7,7 @@ import java.util.List;
  * @author Kamil Rojek
  */
 
-//obselote
-public class Round {
+public class Round { //TODO krzysiek unused class
     List<Player> players;
 
     public Round(List<Player> players) {
@@ -20,3 +19,5 @@ public class Round {
     }
 
 }
+
+

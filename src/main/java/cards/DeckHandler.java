@@ -10,11 +10,11 @@ import java.util.List;
  * @author Kamil Rojek
  */
 public class DeckHandler {
-    private int numberOfDecks;
+    private int numberOfDecks; //TODO krzysiek never used
     private int numberOfJockers;
 
     //change for multiple decks
-    private List<Card> deck;
+    private List<Card> deck; //TODO krzysiek never used
 
     public DeckHandler(ISetting setting) {
         this.numberOfDecks = setting.getNumberOfDecks();

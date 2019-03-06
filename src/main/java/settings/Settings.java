@@ -14,6 +14,8 @@ public class Settings implements ISetting {
     private final int JOCKERS = 2;
 
 
+    //TODO krzysiek what is the purpouse of this? they are never used
+
     public void setNumberOfPlayers(int number) {
         numberOfPlayers = number;
     }

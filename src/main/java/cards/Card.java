@@ -7,6 +7,7 @@ public class Card {
     private Value value;
     private Type type;
 
+//    TODO Marcin Ogorzalek - nice thing with default constructor use to make JOCKERS
     public Card(Value value) {
         type = Type.CLUBS;
         this.value = value;

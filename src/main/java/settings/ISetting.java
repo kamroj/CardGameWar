@@ -6,5 +6,5 @@ package settings;
 public interface ISetting {
     int getNumberOfPlayers();
     int getNumberOfDecks();
-    int getNumberOfJockers();
+    int getNumberOfJockers(); // TODO Wojciech Makieła - Jokers, not Jockers. Intellij shows you this error
 }

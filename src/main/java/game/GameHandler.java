@@ -11,6 +11,7 @@ import java.util.List;
  * @author Kamil Rojek
  */
 public class GameHandler {
+    // TODO Wojciech Makieła - access modifiers! Keep things private
     DeckHandler deck;
     List<Player> players;
     Table table;
@@ -30,8 +31,8 @@ public class GameHandler {
         table = new Table();
         givePlayerCards();
 
-        while (players.get(0).playerCards.size() != 0 && players.get(1).playerCards.size() != 0) {
-            if (draw == true) {
+        while (players.get(0).playerCards.size() != 0 && players.get(1).playerCards.size() != 0) { // TODO Wojciech Makieła - If you have long logical operation, try extracting it to a new method => for example while(playersHaveCards())
+            if (draw == true) { // TODO Wojciech Makieła - if (true == true)... can be written in simpler way - if (true)
                 drawPlay();
             } else {
                 round();
@@ -45,7 +46,7 @@ public class GameHandler {
         int cardCounter = 1;
 
         for (Card card : cardTail) {
-            if (cardCounter % 2 == 0) {
+            if (cardCounter % 2 == 0) { // TODO Wojciech Makieła - I assume that 2 is number of players. Wouldn't it be nice to pass it via parameter from outside? Easier refactor in the future
                 players.get(0).playerCards.add(card);
             } else {
                 players.get(1).playerCards.add(card);
@@ -64,7 +65,7 @@ public class GameHandler {
         System.out.println("Player one : " + cardPlayerOne.getCardValue());
         System.out.println("Player two : " + cardPlayerTwo.getCardValue());
 
-        //Change to dyn list
+        //Change to dyn list  // TODO Wojciech Makieła - what 'dyn' stands for? You write code once. It will be read many times.
         table.stackCards(cardPlayerOne);
         table.stackCards(cardPlayerTwo);
 

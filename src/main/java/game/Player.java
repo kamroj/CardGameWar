@@ -10,6 +10,8 @@ import java.util.List;
 /**
  * @author Kamil Rojek
  */
+
+
 public class Player {
     List<Card> playerCards;
 

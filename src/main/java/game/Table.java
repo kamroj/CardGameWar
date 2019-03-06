@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author Kamil Rojek
  */
-public class Table {
+public class Table { //TODO krzysiek package private and all methods
     private List<Card> cardsOnTable;
 
     public Table () {
@@ -20,6 +20,7 @@ public class Table {
     }
 
     public void giveCardsToPlayer(Player player) {
+        // TODO Wojciech Makieła - player.playerCards.addAll(cardsOnTable)
         for (Card card : cardsOnTable) {
             player.playerCards.add(card);
         }
