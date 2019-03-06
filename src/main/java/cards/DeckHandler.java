@@ -53,6 +53,8 @@ public class DeckHandler {
     }
 
     public void debugLog(){
+
+        var deck = getDeck();
         //debug
         int number = 1;
         for (Card card : deck){

@@ -13,6 +13,6 @@ public class AppMain {
         ISetting settings = new Settings();
         DeckHandler deckHandler = new DeckHandler(settings);
 
-        deckHandler.getFilledDeck();
+        deckHandler.debugLog();
     }
 }
